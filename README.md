@@ -1,17 +1,38 @@
-## Basic Cordapp Sample
+## Install corda blockchain on ubuntu
 
-This folder features basic sample projects, each of them demonstrates low level cordapp functionalities, such as [RPC connection](https://docs.corda.net/docs/corda-os/api-rpc.html#api-rpc-operations), messaging, etc.
+1) prepare and update system and sevices.
+ ```sh
+sudo apt-get update
+```
+2) install java virtual machine and java runtime.
+ ```sh
+sudo apt-get install openjdk-8-jdk
+```
+3) define java home path
+ ```sh
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+```
+4) clone project from remote repo to your local project directory.
+```sh
+git clone https://github.com/bizqsoft/corda-mea.git
+```
+5) Navigate to root project directory.
+6) clean build project
+ ```sh
+./gradlew clean build
+```
+7) deploy node
+ ```sh
+./gradlew deployNodes
+```
+8) run corda node
+ ```sh
+./build/node/runnodes
+```
+9) run spring webserver
+ ```sh
+./gradlew runPartyAServer
+```
 
-### [Cordapp Example](mea):
-A simple exploratory sample for the official [Corda online training](https://training.corda.net).
-
-### [Database Access](./flow-database-access):
-This CorDapp provides a simple example of how the node database can be accessed within flows. In this case, the flows maintain a table of cryptocurrency values in the node's database.
-
-### [Http Access](./flow-http-access):
-This CorDapp provides a simple example of how HTTP requests can be made in flows. In this case, the flow makes an HTTP request to retrieve the original BitCoin readme from GitHub.
-
-### [Ping Pong](./ping-pong):
-This CorDapp allows a node to ping any other node on the network, demonstrating stateless communication between nodes.
 
 
