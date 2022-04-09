@@ -1,0 +1,38 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="R3.Corda" id="create_matching">
+        <createTable tableName="matching">
+            <column name="output_index" type="INT"/>
+            <column name="transaction_id" type="NVARCHAR(64)"/>
+            <column name="sender" type="NVARCHAR(64)"/>
+            <column name="receiver" type="NVARCHAR(64)"/>
+            <column name="linear_id" type="NVARCHAR(64)"/>
+            <column name="networkname" type="NVARCHAR(64)"/>
+            <column name="tradedatetime" type="NVARCHAR(64)"/>
+            <column name="tradetype" type="NVARCHAR(64)"/>
+            <column name="buyerid" type="NVARCHAR(64)"/>
+            <column name="buyervolume" type="NVARCHAR(64)"/>
+            <column name="buyercost" type="NVARCHAR(64)"/>
+            <column name="sellerid" type="NVARCHAR(64)"/>
+            <column name="sellervolume" type="NVARCHAR(64)"/>
+            <column name="sellercost" type="NVARCHAR(64)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="R3.Corda" id="create_real">
+        <createTable tableName="real">
+            <column name="output_index" type="INT"/>
+            <column name="transaction_id" type="NVARCHAR(64)"/>
+            <column name="sender" type="NVARCHAR(64)"/>
+            <column name="receiver" type="NVARCHAR(64)"/>
+            <column name="linear_id" type="NVARCHAR(64)"/>
+            <column name="networkname" type="NVARCHAR(64)"/>
+            <column name="realdatetime" type="NVARCHAR(64)"/>
+            <column name="customertype" type="NVARCHAR(64)"/>
+            <column name="meterid" type="NVARCHAR(64)"/>
+            <column name="volume" type="NVARCHAR(64)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
