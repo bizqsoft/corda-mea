@@ -35,4 +35,20 @@ git clone https://github.com/bizqsoft/corda-mea.git
 ```
 
 
+## run database migration all your nod.
+java -jar corda.jar run-migration-scripts --core-schemas --app-schemas --allow-hibernate-to-manage-app-schema
+
+## Corda Cross Origin Resource Sharing (CORS) setting ,add this command on Controller.java then rebuild your project.
+
+ ```sh
+@CrossOrigin(origins = "http://www.<your domain>") 
+```
+
+or
+
+```sh
+@CrossOrigin(origins = "*")
+```
+
+
 
