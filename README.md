@@ -52,7 +52,10 @@ or
 @CrossOrigin(origins = "*")
 ```
 
-
-d /nodeB/partyb
-java -jar corda.jar
 Run corda server by script
+
+cd /nodeB/partyb
+
+java -jar corda.jar
+
+
