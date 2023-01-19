@@ -53,4 +53,6 @@ or
 ```
 
 
-
+d /nodeB/partyb
+java -jar corda.jar
+Run corda server by script
